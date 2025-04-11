@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boston House Price Predictor</title>
+    <style>
+        body { font-family: Arial; background-color: #f9f9f9; padding: 40px; }
+        form { background: #fff; padding: 20px; border-radius: 10px; width: 300px; box-shadow: 0 0 10px #ddd; }
+        input, button { width: 100%; padding: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h2>🏠 Boston Housing Price Predictor</h2>
+    <form method="POST">
+        <label>Average Number of Rooms:</label>
+        <input type="number" name="rooms" step="any" required>
+        <button type="submit">Predict</button>
+        {% if prediction %}
+        <p><strong>Prediction:</strong> {{ prediction }}</p>
+        {% endif %}
+    </form>
+</body>
+</html>
